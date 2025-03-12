@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- ImageView moved to the bottom of the screen -->
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="117dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="132dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
+    <!-- First TextView -->
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="107dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:text="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image" />
+
+    <TextView
+        android:id="@+id/text_header"
+        android:layout_width="395dp"
+        android:layout_height="64dp"
+        android:background="@drawable/blue_border"
+        android:gravity="center"
+        android:text="Николай Курьянов1"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47" />
+
+
+    <!-- Second TextView -->
+    <TextView
+        android:id="@+id/text_first"
+        android:layout_width="192dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="88dp"
+        android:text="Николай Курьянов"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@+id/text_header" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="148dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:text="Был в сети 7 марта"
+        android:textColor="#808080"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@+id/text_first" />
+
+    <TextView
+        android:id="@+id/text_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:text="Age: 20"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/text_friends_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:text="Friends: 200"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@+id/text_age" />
+
+    <TextView
+        android:id="@+id/text_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        android:text="City: Moscow"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@+id/text_friends_count" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/postsRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="Список постов"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
